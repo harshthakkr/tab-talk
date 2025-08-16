@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run copy-extension-files",
+    "build": "next build && mv out/_next out/static && cp manifest.json ./out",
     "build:extension": "next build && npm run copy-extension-files",
     "copy-extension-files": "cp manifest.json out/ && cp -r icons out/",
     "start": "next start",
